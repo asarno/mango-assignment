@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+  background-color: #a875ff;
+}
+
+table {
+  border: 1px solid #ababab;
+  background-color: #fcfcfc;
+}
+
+
+.app {
+  width: 500px;
+  padding-top: 30px;
+  padding-left: 30px;
+}
+
+
+

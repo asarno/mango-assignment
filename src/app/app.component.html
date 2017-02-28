@@ -1,0 +1,25 @@
+<div class='app'>
+  <form>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Filter by Name:</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="ie United States" [(ngModel)]='term' [ngModelOptions]="{standalone: true}"
+      />
+    </div>
+  </form>
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th *ngFor="let column of columns" (click)="reverseOrder()">
+          {{column.title}}
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let obj of countries | filter:term">
+        <td>{{obj.name}}</td>
+        <td>{{obj.code}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
